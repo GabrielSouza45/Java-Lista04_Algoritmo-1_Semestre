@@ -2,7 +2,7 @@ public class Exercicio16 {
 
     public static void main(String[] args) {
 
-        int[] a = {5,7,68,4,13,8,6,5,86,6};
+        int[] a = {3, 6, 7, 8, 1, 2, 5, 3, 9};
 
         boolean move = true;
         while(move){

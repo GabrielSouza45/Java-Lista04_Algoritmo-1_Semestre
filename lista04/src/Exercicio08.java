@@ -6,26 +6,20 @@ public class Exercicio08 {
     public static void main(String[] args) {
 
         int[] valores = {4,2,2,4,5,5,7,7,9,5};
-
         int x = 5;
 
-        List<Integer> posicao = new ArrayList<>();
+        boolean existe = false;
         for(int i =0; i < valores.length; i++){
             if(valores[i] == x){
-                posicao.add(i+1);
+                existe = true;
+                break;
             }
         }
-        if (posicao.size() > 0){
-            System.out.println("O valor " + x + " existe" + ((posicao.size() > 1)? " nas posições: ": " na posição: "));
-            for(int i =0; i< posicao.size(); i++){
-                System.out.print(
-                        posicao.get(i) + ((i+1 == posicao.size()) ? ""  : ", ")
-                );
-            }
-            System.out.println();
+        if (existe){
+            System.out.println("Valor existe no vetor.");
         }
         else {
-            System.out.println("O valor "+ x + " não existe no array.");
+            System.out.println("O valor "+ x + " não existe no vetor.");
         }
         System.out.println();
         System.out.println("Array: ");

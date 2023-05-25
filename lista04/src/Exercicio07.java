@@ -4,13 +4,15 @@ public class Exercicio07 {
 
         int[] valores = {1,2,3,4,5,6,7,8,9,10};
         int x = 20;
-        int mult = 0;
 
-        for(int valor : valores){
-            mult += valor * x;
+        for(int i =0; i < valores.length; i++){
+            valores[i] = valores[i] * x;
         }
-        System.out.println("O produto dos valores do array multiplicado pelo valor " + x
-                + " é: " + mult );
+        System.out.print("[");
+        for(int i =0; i < valores.length; i++){
+            System.out.print(valores[i] + ((i+1 == valores.length) ? ""  : ", "));
+        }
+        System.out.print("]");
     }
 
 }
