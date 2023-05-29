@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Exercicio18 {
 
     public static void main(String[] args) {
@@ -8,18 +5,25 @@ public class Exercicio18 {
         int[] valores = {4,2,2,4,5,5,7,7,9,5};
 
         int x = 5;
-
-        List<Integer> posicao = new ArrayList<>();
+        int exists = 0;
         for(int i =0; i < valores.length; i++){
             if(valores[i] == x){
-                posicao.add(i+1);
+                exists++;
             }
         }
-        if (posicao.size() > 0){
-            System.out.println("O valor " + x + " existe" + ((posicao.size() > 1)? " nas posições: ": " na posição: "));
-            for(int i =0; i< posicao.size(); i++){
+        int[] posicao = new int[exists];
+        int j =0;
+        for(int i =0; i < valores.length; i++){
+            if(valores[i] == x){
+                posicao[j] = (i+1);
+                j++;
+            }
+        }
+        if (posicao.length > 0){
+            System.out.println("O valor " + x + " existe" + ((posicao.length > 1)? " nas posições: ": " na posição: "));
+            for(int i =0; i< posicao.length; i++){
                 System.out.print(
-                        posicao.get(i) + ((i+1 == posicao.size()) ? ""  : ", ")
+                        posicao[i] + ((i+1 == posicao.length) ? ""  : ", ")
                 );
             }
             System.out.println();

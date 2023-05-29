@@ -13,7 +13,7 @@ public class Exercicio36 {
         for (int i = 0; i < matriz.length; i++) { //linha
             for (int j = 0; j < matriz[0].length; j++) { //coluna
                 if (j+aux < matriz[0].length) {
-                    System.out.println(matriz[i][j + aux]);
+                    System.out.print(matriz[i][j + aux] + (i+1 >= matriz[0].length ? "" : ", "));
                     aux++;
                     break;
                 }

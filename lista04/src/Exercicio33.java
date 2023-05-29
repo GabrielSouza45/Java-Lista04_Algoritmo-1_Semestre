@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class Exercicio33 {
 
     public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class Exercicio33 {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                  if (matriz[i][j] < 0){
-                     System.out.println("Linha: "+ (i+1) + "\n Coluna: "+ (j+1) );
+                     System.out.println("Linha: "+ (i+1) + ", Coluna: "+ (j+1) );
                  }
             }
         }

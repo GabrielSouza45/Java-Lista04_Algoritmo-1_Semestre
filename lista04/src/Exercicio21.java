@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Exercicio21 {
@@ -18,7 +17,7 @@ public class Exercicio21 {
             nome[i] = sc.nextLine();
 
             System.out.print("Digite a nota de " + nome[i] + " : ");
-            notas[i] = sc.nextInt();
+            notas[i] = sc.nextDouble();
             sc.nextLine();
         }
 
@@ -27,19 +26,16 @@ public class Exercicio21 {
             media += nota;
         }
         media = media / notas.length;
-        System.out.println(media);
+        System.out.println("Média: " + media);
 
-        HashMap<String, Double> acimaDaMedia = new HashMap<>();
+        System.out.println("Alunos acima da média: ");
         for(int i = 0; i < qtd; i++){
             if (notas[i] >= media){
-                acimaDaMedia.put(nome[i], notas[i]);
+                System.out.println("Nome: " + nome[i] + "\n Nota: " + notas[i]);
             }
         }
 
-        for(String key : acimaDaMedia.keySet()){
-            System.out.println("Aluno(a): " + key + "\n Nota: " + acimaDaMedia.get(key));
-        }
-
+        sc.close();
     }
 
 }

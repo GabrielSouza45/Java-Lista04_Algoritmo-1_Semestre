@@ -16,7 +16,7 @@ public class Exercicio16 {
                 }
             }
         }
-        System.out.println("Lista em ordem crescente: " );
+        System.out.println("Array em ordem crescente: " );
         System.out.print("[");
         for(int h =0; h < a.length; h++ ){
             System.out.print(

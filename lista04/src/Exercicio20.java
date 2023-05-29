@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Exercicio20 {
 
     public static void main(String[] args) {
@@ -28,7 +25,7 @@ public class Exercicio20 {
                     novaArray[j] + ((j + 1 >= tamanho) ? "" : ", ")
             );
         }
-        System.out.print("]");
+        System.out.println("]");
         System.out.println();
         System.out.println("posições ímpares" +
                 "");
